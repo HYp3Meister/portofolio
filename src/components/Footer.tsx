@@ -16,13 +16,13 @@ const Inner = styled.div`
   justify-content: space-between;
 `;
 
-const Links = styled.div`
+const StyledDiv = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: ${({ theme }) => theme.space[3]};
 `;
 
-const A = styled.a`
+const Link = styled.a`
   color: ${({ theme }) => theme.colors.text};
   text-decoration: none;
   &:hover {
@@ -35,29 +35,33 @@ const A = styled.a`
   }
 `;
 
+const StyledSmall = styled.small`
+  color: ${({ theme }) => theme.colors.primaryText};
+`
+
 export default function Footer() {
-    return (
-        <FooterBar>
-            <Inner>
-                <small>© {new Date().getFullYear()} Portfolio</small>
-                <Links aria-label="Footer links">
-                    <A
-                        href="https://github.com/HYp3Meister"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        GitHub
-                    </A>
-                    <A
-                        href="https://www.linkedin.com/in/aycan-sapmaz/"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        LinkedIn
-                    </A>
-                    <A href="mailto:sapmaz72@gmail.com" title='sapmaz72@gmail.com'>Email</A>
-                </Links>
-            </Inner>
-        </FooterBar>
-    );
+  return (
+    <FooterBar>
+      <Inner>
+        <StyledSmall>© {new Date().getFullYear()} Portfolio</StyledSmall>
+        <StyledDiv aria-label="Footer links">
+          <Link
+            href="https://github.com/HYp3Meister"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/aycan-sapmaz/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </Link>
+          <Link href="mailto:sapmaz72@gmail.com" title='sapmaz72@gmail.com'>Email</Link>
+        </StyledDiv>
+      </Inner>
+    </FooterBar>
+  );
 }
