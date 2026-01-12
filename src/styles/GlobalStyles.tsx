@@ -11,6 +11,20 @@ export const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
   }
-  a{ color:inherit; text-decoration:none; }
-  :focus-visible{ outline:3px solid ${({ theme }) => theme.colors.focus}; outline-offset:2px; }
+  a{
+    color:inherit;
+    text-decoration:none;
+  }
+  a:hover{
+    text-decoration:underline;
+  }
+  a:visited,
+  a:active{
+    color:inherit;
+  }
+
+  :focus-visible{
+    outline:3px solid ${({ theme }) => theme.colors.focus};
+    outline-offset:2px;
+  }
 `;
