@@ -12,14 +12,12 @@ export const StyledNavLink = styled(NavLink)`
   font-weight: 500;
 
   &:hover {
-    /* text-decoration: underline; */
     color: ${({ theme }) => theme.colors.primaryText};
 }
 
 &[aria-current='page'] {
     font-weight: 700;
     color: ${({ theme }) => theme.colors.primaryText};
-    /* text-decoration: underline; */
   }
 
   &:focus-visible {
@@ -29,12 +27,12 @@ export const StyledNavLink = styled(NavLink)`
 `;
 
 export default function Nav() {
-    return (
-        <NavWrapper aria-label="Main navigation">
-            <StyledNavLink to="/">Home</StyledNavLink>
-            <StyledNavLink to="/about">About</StyledNavLink>
-            <StyledNavLink to="/projects">Projects</StyledNavLink>
-            <StyledNavLink to="/contact">Contact</StyledNavLink>
-        </NavWrapper>
-    );
+  return (
+    <NavWrapper aria-label="Main navigation">
+      <StyledNavLink to="/">Home</StyledNavLink>
+      <StyledNavLink to="/about">About</StyledNavLink>
+      <StyledNavLink to="/projects">Projects</StyledNavLink>
+      <StyledNavLink to="/contact">Contact</StyledNavLink>
+    </NavWrapper>
+  );
 }
