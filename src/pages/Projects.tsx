@@ -1,3 +1,11 @@
+import Seo from "../components/Seo";
+
 export default function Projects() {
-    return <h1>Projects</h1>;
+    return (
+        <>
+            <Seo title="Projects" description="My list of projects" />
+            <h1>Projects</h1>
+        </>
+    )
+        ;
 }
