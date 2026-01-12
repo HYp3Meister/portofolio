@@ -1,9 +1,15 @@
-import './App.css'
+import { Container, Card, Button } from './components/ui'
 
 function App() {
 
   return (
-    <text>Hello There</text>
+    <Container>
+      <Card>
+        <h2>My Project</h2>
+        <Button>View</Button>
+        <Button $variant="ghost">Cancel</Button>
+      </Card>
+    </Container>
   )
 }
 
